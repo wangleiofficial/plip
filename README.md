@@ -88,11 +88,11 @@ Either set your `PYTHONPATH` environment variable to the root directory of your 
 $ python setup.py install
 ```
 
-#### Via PyPi
-We deploy the PLIP package to [PyPi](https://pypi.org/project/plip/). You can install PLIP as Python module with:
+#### Pip install from git repo
+The pypi package of OpenBabel 3.1.1.1 was wrongly built, please refer to [issue](https://github.com/openbabel/openbabel/issues/2408#issuecomment-1014582279). You can install PLIP as Python module with:
 
 ```bash
-$ pip install plip
+$ pip install git+https://github.com/pharmai/plip.git
 ```
 
 **Note:** Be aware that you still have to install the above mentioned dependencies and link them correctly.
@@ -197,19 +197,14 @@ By default PLIP uses the first model it sees in a PDB file. You can change this 
 As many users encounter problems with installing the required OpenBabel tools, we want to provide some help here. However, we cannot offer technical support. Comprehensive information about the installation of OpenBabel for Windows, Linux, and macOS can be found in the [OpenBabel wiki](http://openbabel.org/wiki/Category:Installation) and the [OpenBabel Docs](https://open-babel.readthedocs.io/en/latest/Installation/install.html).
 Information about the installation of [OpenBabel Python bindings](https://open-babel.readthedocs.io/en/latest/UseTheLibrary/PythonInstall.html) can also be found there.
 
-### Using Conda, HomeBrew or the binary Windows Installer
+### Using Conda intall OpenBabel and Python bindings
 
 Install OpenBabel using the [binary from GitHub](https://github.com/openbabel/openbabel/releases/latest) or with
 ```bash
 # For Conda users
 $ conda install openbabel -c conda-forge
-# On macOS
-$ brew install open-babel
 ```
-Install the Python bindings with
-```bash
-$ pip install openbabel
-```
+
 **Note:** If you have trouble, make sure the OpenBabel version matches the one for the python bindings!
 
 ### Using your Package Manager (Example for Ubuntu 20.04)
