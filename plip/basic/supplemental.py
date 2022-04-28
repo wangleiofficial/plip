@@ -375,7 +375,7 @@ def read_pdb(pdbfname, as_string=False):
 def read(fil):
     """Returns a file handler and detects gzipped files."""
     if os.path.splitext(fil)[-1] == '.gz':
-        return gzip.open(fil, 'rb')
+        return gzip.open(fil, 'rt')
     elif os.path.splitext(fil)[-1] == '.zip':
         zf = zipfile.ZipFile(fil, 'r')
         return zf.open(zf.infolist()[0].filename)
